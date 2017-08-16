@@ -38,6 +38,18 @@
 	}
 }
 
-.nav-wrapper{
-	background-color: $color_naranjo;
-}
+.signup{
+	background-color:$color_gris;
+	height:100vh;
+	width:100%;
+	.nav-wrapper{
+		background-color: $color_naranjo;
+	}
+	h1{
+		color: $color_naranjo;
+		text-align:center;
+		margin-top:10rem;
+		font-weight:900;
+	}
+}	
+
