@@ -4,6 +4,39 @@
 }
 
 /* INDEX- SIGNUP */
+.inicio{
+	background-image: url(../img/tastyfoodintro.jpg);
+	width:100%;
+	height:100vh;
+	background-size: cover;
+	background-position: center bottom;
+	h1{
+		color:white;
+		font-weight:900;
+		text-align: center;
+		margin-top: 6em;
+	}
+	.form-signup{
+		margin-top:6rem;
+	}
+	.btn-inicio{
+		display: block;
+		margin-top:3rem;
+		height:6vh;
+		background-color: $color_naranjo;
+		border-radius: 14px;
+	}
+	h4{
+		font-weight: 800;
+	}
+	p{
+		text-align:center;
+		color: $color_gris;
+		font-weight:800;
+		margin-top:2rem;
+		font-size:19px;
+	}
+}
 
 .nav-wrapper{
 	background-color: $color_naranjo;
