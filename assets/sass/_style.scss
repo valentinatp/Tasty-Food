@@ -48,3 +48,33 @@ select{
 .back-text13, .back-text14{
 	height: 147px;
 }
+
+/*THIRD SECTION*/
+
+.third-section{
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+}
+.nombre_restaurant{
+	background-color: $color_naranjo;
+	.nombre_restaurant_h{
+		display: inline-block;
+		text-transform: uppercase;
+	}
+	.heart_favorito{
+		font-size: 2.92rem;
+		margin-top: 20.4px;
+		cursor: pointer;
+		color: white;
+	}
+}
+.paraf_restaurant{
+	font-size: 2.5rem;
+	margin: 0;
+}
+.paraf_h{
+	font-weight: bold;
+	margin: 15px 0 8px 0;
+}
+		

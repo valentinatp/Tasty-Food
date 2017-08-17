@@ -20255,6 +20255,8 @@ if (jQuery) {
 
 $(document).ready(function(){
     $(".button-collapse").sideNav();
+    $('.cajita_restaurant').hide();
+	var arr_restaurantes = [];
 
     var ajaxZomato = function(element){
 				$.ajax({
@@ -20270,14 +20272,16 @@ $(document).ready(function(){
 		            	var contador = f + 1;
 		            	var restName = el.restaurant.name;
 		            	var direccion = el.restaurant.location.address;
+		            	var comuna = el.restaurant.location.locality;
 		            	var costo = el.restaurant.average_cost_for_two;
+		            	var moneda = el.restaurant.currency;
 		            	var rating = el.restaurant.user_rating.aggregate_rating;
 		            	var cuisine = el.restaurant.cuisines;
 		            	var img = el.restaurant.thumb;
 		            	var id = el.restaurant.id;
 
 		            	$(".datos-restaurants").append(`<div class="col s4">`+
-		            										`<img src=${img} class="img-restaurant${contador} imgs">`+
+		            										`<img id=${id} src=${img} class="img-restaurant${contador} imgs">`+
 		            										`<div class="row back-text back-text${contador}">`+
 		            											`<div class="col s9 color-text">`+
 		            												`<h6>${restName}</h6>`+
@@ -20288,6 +20292,34 @@ $(document).ready(function(){
 		            											`</div>`+
 															`</div>`+ 
 		            									`</div>`);
+		            	$('#'+id).click(function(event) {
+		            		$('.cajita_restaurant').show();
+		            		$('.cajita_restaurant').empty();
+		            		$('.cajita_restaurant').append('<div class="col s12 nombre_restaurant">'+
+			            			'<div class="col s8 offset-s2 center">'+
+			            				'<h3 class="nombre_restaurant_h white-text">'+restName+'</h3>'+
+			        				'</div>'+
+			        				'<div class="col s2">'+
+			        					'<i class="material-icons heart_favorito right" id="heart'+id+'">favorite</i>'+
+			    					'</div>'+
+			    				'</div>'+
+			    				'<div class="col s12 center">'+
+			    					'<h3 class="orange-text paraf_h">Address</h3>'+
+			    					'<p class="paraf_restaurant">'+direccion+'</p>'+
+			    					'<h3 class="orange-text paraf_h">Price for 2</h3>'+
+			    					'<p class="paraf_restaurant">'+moneda+' '+costo+'</p>'+
+			    					'<h3 class="orange-text paraf_h">Rating</h3>'+
+			    					'<p class="paraf_restaurant">'+rating+' <i class="material-icons">star</i></p>'+
+								'</div>')
+
+								//var arr_restaurantes = [];
+				            	$('#heart'+id).click(function() {
+				            		$('#heart'+id).css('color', 'red');
+				            		arr_restaurantes.push(restName);
+				            		localStorage.setItem("restaurantes", JSON.stringify(arr_restaurantes));
+				            	});
+			            		console.log(arr_restaurantes);
+		            	});
 		            })
 		            												
 		        })
