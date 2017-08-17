@@ -50,3 +50,42 @@ select{
 .back-text13, .back-text14, .back-text15{
 	height: 147px;
 }
+
+/*THIRD SECTION*/
+.pie-fijo{
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	width: 100vw;
+	height: 310px;
+	background-color: $color_gris;
+}
+.third-section{
+	position: fixed;
+	bottom: 0;
+	z-index: 2000;
+	width: 100vw;
+	height: 310px;
+}
+.nombre_restaurant{
+	background-color: $color_naranjo;
+	.nombre_restaurant_h{
+		display: inline-block;
+		text-transform: uppercase;
+	}
+	.heart_favorito{
+		font-size: 2.92rem;
+		margin-top: 20.4px;
+		cursor: pointer;
+		color: white;
+	}
+}
+.paraf_restaurant{
+	font-size: 1.64rem;
+	margin: 0;
+}
+.paraf_h{
+	font-weight: bold;
+	margin: 15px 0 8px 0;
+}
+		
