@@ -50,11 +50,20 @@ select{
 }
 
 /*THIRD SECTION*/
-
-.third-section{
+.pie-fijo{
 	position: fixed;
 	bottom: 0;
 	z-index: 1000;
+	width: 100vw;
+	height: 310px;
+	background-color: $color_gris;
+}
+.third-section{
+	position: fixed;
+	bottom: 0;
+	z-index: 2000;
+	width: 100vw;
+	height: 310px;
 }
 .nombre_restaurant{
 	background-color: $color_naranjo;
