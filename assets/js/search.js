@@ -25,34 +25,37 @@ $(document).ready(function(){
 		            	var img = el.restaurant.thumb;
 		            	var id = el.restaurant.id;
 
-		            	$(".datos-restaurants").append(`<div class="col s4">`+
-		            										`<img id=${id} src=${img} class="img-restaurant${contador} imgs">`+
-		            										`<div class="row back-text back-text${contador}">`+
-		            											`<div class="col s9 color-text">`+
-		            												`<h6>${restName}</h6>`+
-		            												`<p>${direccion}</p>`+
-		            											`</div>`+
-		            											`<div class="col s3 color-texto">`+
-		            												`<p><i class="large material-icons">restaurant</i></p>`+
-		            											`</div>`+
-															`</div>`+ 
-		            									`</div>`);
+		            	var imag = `<img id=${id} src=${img} class="img-restaurant${contador} imgs imagenes-w-h">`;
+		            	var imag2 = `<img id=${id} src='assets/img/default.png' class="img-restaurant${contador} imgs imagenes-w-h">`;
 
 
 		            	if(img == ""){
-		            		$(".datos-restaurants").append(`<div class="col s4">`+
-		            										`<img src='assets/img/default.png' class="img-restaurant${contador} imgs">`+
+		            		$(".datos-restaurants").append(`<div class="col s4 prueba">`+
+		            										`<div class='row'><div class='col s12'>${imag2}</div></div>`+
 		            										`<div class="row back-text back-text${contador}">`+
 		            											`<div class="col s9 color-text">`+
 		            												`<h6>${restName}</h6>`+
-		            												`<p>${direccion}</p>`+
+		            												`<p>${comuna}</p>`+
 		            											`</div>`+
 		            											`<div class="col s3 color-texto">`+
 		            												`<p><i class="large material-icons">restaurant</i></p>`+
 		            											`</div>`+
 															`</div>`+ 
 		            									`</div>`);
-		            		console.log("chao");
+
+						}else{
+							$(".datos-restaurants").append(`<div class="col s4 prueba">`+
+		            										`<div class='row'><div class='col s12'>${imag}</div></div>`+
+		            										`<div class="row back-text back-text${contador}">`+
+		            											`<div class="col s9 color-text">`+
+		            												`<h6>${restName}</h6>`+
+		            												`<p>${comuna}</p>`+
+		            											`</div>`+
+		            											`<div class="col s3 color-texto">`+
+		            												`<p><i class="large material-icons">restaurant</i></p>`+
+		            											`</div>`+
+															`</div>`+ 
+		            									`</div>`);
 						}
 
 		            	$('#'+id).click(function(event) {
@@ -92,10 +95,12 @@ $(document).ready(function(){
 
 	//Select
     $("#search").change(function(){
+    	console.log("borrar");
+    	$(".datos-restaurants").html("");
     	if(($("#search").val()) == "santiago"){
 			ajaxZomato(83);
-    	}else if(($("#search").val()) == "río-de-janeiro"){
-    		ajaxZomato(73);
+		}else if(($("#search").val()) == "río-de-janeiro"){
+			ajaxZomato(73);
     	}else if(($("#search").val()) == "sao-paulo"){
     		ajaxZomato(67);
     	}else if(($("#search").val()) == "roma"){

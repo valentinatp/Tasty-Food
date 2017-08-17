@@ -7,12 +7,19 @@ select{
 	display: block;
 	margin-top: 40px;
 }
+.prueba{
+	max-width: 284px;
+	max-height: 324px;
+}
+.imagenes-w-h{
+	max-width: 284px;
+	max-height: 350px;
+}
 .imgs{
 	width: 100%;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	max-width: 299px;
-	max-height: 224px;
+	
 }
 .img-restaurant5{
 	height: 198px;
@@ -21,17 +28,20 @@ select{
 	background-color: $color_naranjo;
 	color: white;
 	position: relative;
-    top: -6px;
+    top: -29px;
     left: 10px;
     margin-right: 6px !important;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    max-width: 268px;
+    max-height: 100px;
 }
 .color-text{
 	h6{
 		display: inline-block;
 		margin-top: 14px;
-		font-weight: 700;		
+		font-weight: 700;
+		margin-right: 53px;		
 	}
 	p{
 		display: inline-block;
@@ -43,12 +53,6 @@ select{
 			font-size: 26px;
 		}
 	}
-}
-.back-text1, .back-text2, .back-text4, .back-text5{
-	height: 126px;
-}
-.back-text13, .back-text14, .back-text15{
-	height: 147px;
 }
 
 /*THIRD SECTION*/
