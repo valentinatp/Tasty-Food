@@ -11,6 +11,8 @@ select{
 	width: 100%;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	max-width: 299px;
+	max-height: 224px;
 }
 .img-restaurant5{
 	height: 198px;
@@ -45,6 +47,6 @@ select{
 .back-text1, .back-text2, .back-text4, .back-text5{
 	height: 126px;
 }
-.back-text13, .back-text14{
+.back-text13, .back-text14, .back-text15{
 	height: 147px;
 }

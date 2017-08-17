@@ -20288,6 +20288,23 @@ $(document).ready(function(){
 		            											`</div>`+
 															`</div>`+ 
 		            									`</div>`);
+
+		            	if(img == ""){
+		            		$(".datos-restaurants").append(`<div class="col s4">`+
+		            										`<img src='assets/img/default.png' class="img-restaurant${contador} imgs">`+
+		            										`<div class="row back-text back-text${contador}">`+
+		            											`<div class="col s9 color-text">`+
+		            												`<h6>${restName}</h6>`+
+		            												`<p>${direccion}</p>`+
+		            											`</div>`+
+		            											`<div class="col s3 color-texto">`+
+		            												`<p><i class="large material-icons">restaurant</i></p>`+
+		            											`</div>`+
+															`</div>`+ 
+		            									`</div>`);
+		            		console.log("chao");
+
+		            	}
 		            })
 		            												
 		        })
@@ -20299,7 +20316,8 @@ $(document).ready(function(){
 	//Select
     $("#search").change(function(){
     	if(($("#search").val()) == "santiago"){
-    		ajaxZomato(83);
+			ajaxZomato(83);
+    		$(".datos-restaurants").empty();
     	}else if(($("#search").val()) == "río-de-janeiro"){
     		ajaxZomato(73);
     	}else if(($("#search").val()) == "sao-paulo"){
