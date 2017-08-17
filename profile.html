@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasty-Food</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+<body>
+    <nav>
+    <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">PROFILE</a>
+      <a href="#!" class="brand-logo left"><i class="material-icons">arrow_back</i></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse right "><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="signup.html">SIGN UP</a></li>
+        <li><a href="search.html">SEARCH</a></li>
+        <li><a href="discover.html">DISCOVER</a></li>
+        <li><a href="profile.html">PROFILE</a></li>
+      </ul>
+      
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="signup.html">SIGN UP</a></li>
+        <li><a href="search.html">SEARCH</a></li>
+        <li><a href="discover.html">DISCOVER</a></li>
+        <li><a href="profile.html">PROFILE</a></li>
+      </ul>
+    </div>
+  </nav>
+    <section class="profile">
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="col m12 s12" id="borderdelete">
+                    <div class="picture">
+                        <img class="image" class="circle center-align img-profile" src="" alt="perfil" >
+                    </div>
+                    <!--<a class="btn" id="uploadphoto">Upload photo</a>-->
+                    <form action="#">
+                        <div class="file-field input-field">
+                          <div class="btn files" >
+                            <span>Upload photo</span>
+                            <input type="file" id="profile_image">
+                          </div>
+                          <div class="file-path-wrapper">
+                          <!--  <input class="file-path validate" type="text">-->
+                          </div>
+                        </div>
+                    </form>                
+
+                    <div class="datos">                
+                        <div class="row">
+                            <form class="col s12">
+                            <div class="row" id="deletebottom">
+                                <div class="input-field col s12">
+                                    <input placeholder="" id="name" type="text" >
+                                    <label for="first_name"></label>
+                                </div>
+                            </div>
+                            <div class="row" id="deletebottom">
+                                <div class="input-field col s12">
+                                    <input placeholder="" id="email" type="text" >
+                                    <label for="first_name"></label>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12" id="borderdelete">
+                                <h5>FAVORITES</h5>
+                                <div id="favoritos" class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="dist/js/script.js"></script>
+</body>
+</html>

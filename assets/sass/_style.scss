@@ -1,1 +1,43 @@
-_style.scss
+/* PROFILE */
+/* font-family: 'Montserrat', sans-serif; */
+.profile{
+	.picture{
+   	height: 400px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;		
+	}#borderdelete{
+		margin: 0;
+    	padding: 0;
+	}.btn:hover {
+    	background-color: $color_naranjo;
+   	}.datos{
+		background-color: $color_gris;
+		height: 200px;
+		width: 100%;
+	}input#name, input#email{
+		background-color: white;
+		border-bottom: 0%;
+		margin-bottom: 0%;
+	}#deletebottom{
+		margin-bottom: 0%;
+	}h5{
+		background-color: $color_gris;
+		padding-top: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}div.file-field.input-field{
+		margin: 0;
+	}.btn{
+		width: 100%;
+		background-color: $color_naranjo;
+	}.image{
+		height: 400px;
+		width: 50%;
+	}
+ }
+/* END PROFILE */
+
+
