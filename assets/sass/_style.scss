@@ -48,8 +48,18 @@
 	h1{
 		color: $color_naranjo;
 		text-align:center;
-		margin-top:10rem;
+		margin-top:7rem;
 		font-weight:900;
+	}
+	.nice-signup{
+		text-align: center;
+		color: gray;
+	}
+	.btn-createaccount{
+		background-color: $color_naranjo;
+		width: 100%;
+		margin-top: 2rem;
+		border-radius:14px;
 	}
 }	
 
