@@ -20297,28 +20297,27 @@ $(document).ready(function(){
 		            		$('.cajita_restaurant').empty();
 		            		$('.cajita_restaurant').append('<div class="col s12 nombre_restaurant">'+
 			            			'<div class="col s8 offset-s2 center">'+
-			            				'<h3 class="nombre_restaurant_h white-text">'+restName+'</h3>'+
+			            				'<h4 class="nombre_restaurant_h white-text">'+restName+'</h4>'+
 			        				'</div>'+
 			        				'<div class="col s2">'+
 			        					'<i class="material-icons heart_favorito right" id="heart'+id+'">favorite</i>'+
 			    					'</div>'+
 			    				'</div>'+
 			    				'<div class="col s12 center">'+
-			    					'<h3 class="orange-text paraf_h">Address</h3>'+
+			    					'<h5 class="orange-text paraf_h">Address</h5>'+
 			    					'<p class="paraf_restaurant">'+direccion+'</p>'+
-			    					'<h3 class="orange-text paraf_h">Price for 2</h3>'+
+			    					'<h5 class="orange-text paraf_h">Price for 2</h5>'+
 			    					'<p class="paraf_restaurant">'+moneda+' '+costo+'</p>'+
-			    					'<h3 class="orange-text paraf_h">Rating</h3>'+
+			    					'<h5 class="orange-text paraf_h">Rating</h5>'+
 			    					'<p class="paraf_restaurant">'+rating+' <i class="material-icons">star</i></p>'+
 								'</div>')
 
-								//var arr_restaurantes = [];
-				            	$('#heart'+id).click(function() {
-				            		$('#heart'+id).css('color', 'red');
-				            		arr_restaurantes.push(restName);
-				            		localStorage.setItem("restaurantes", JSON.stringify(arr_restaurantes));
-				            	});
-			            		console.log(arr_restaurantes);
+							//var arr_restaurantes = [];
+			            	$('#heart'+id).click(function() {
+			            		$('#heart'+id).css('color', 'red');
+			            		arr_restaurantes.push(restName);
+			            		localStorage.setItem("restaurantes", JSON.stringify(arr_restaurantes));
+			            	});
 		            	});
 		            })
 		            												
