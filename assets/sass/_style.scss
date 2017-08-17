@@ -42,9 +42,6 @@
 	background-color:$color_gris;
 	height:100vh;
 	width:100%;
-	.nav-wrapper{
-		background-color: $color_naranjo;
-	}
 	h1{
 		color: $color_naranjo;
 		text-align:center;
@@ -61,5 +58,21 @@
 		margin-top: 2rem;
 		border-radius:14px;
 	}
-}	
-
+	 label {
+    width: 100%;
+	}	
+}
+/* NAVBAR */
+.nav-wrapper{
+		background-color: $color_naranjo;
+	}	
+.side-nav li{
+	margin-top:5rem;
+}
+.side-nav li a{
+	font-size: 18px;
+}
+.side-nav li a:hover{
+	color: $color_naranjo;
+}
+/* fin index-signup */
