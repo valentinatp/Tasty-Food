@@ -20266,7 +20266,7 @@ var ajaxMapa = function(cuisine, ciudad){
 		url: 'https://developers.zomato.com/api/v2.1/search?entity_id='+ciudad+'&entity_type=city&cuisines='+cuisine+'',
 		type: 'GET',
 		dataType: 'json',
-		headers: { 'user-key': '022db00cbdf26d706981d4fa3235767a' },
+		headers: { 'user-key': 'cc92ab23a53a5b062925e25e30238a19' },
 	})
 	.done(function(data) {
 		//console.log(data);
@@ -20288,7 +20288,7 @@ var ajaxCuisines = function(){
 		url: 'https://developers.zomato.com/api/v2.1/cuisines?city_id=83',
 		type: 'GET',
 		dataType: 'json',
-		headers: { 'user-key': '022db00cbdf26d706981d4fa3235767a' },
+		headers: { 'user-key': 'cc92ab23a53a5b062925e25e30238a19' },
 	})
 	.done(function(data) {
 		data.cuisines.forEach(function(elem){
