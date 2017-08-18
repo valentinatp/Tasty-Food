@@ -1,3 +1,4 @@
+
 nav{
 	background-color: $color_naranjo;
 }
@@ -43,4 +44,83 @@ nav{
  }
 /* END PROFILE */
 
+
+*{
+	padding:0;
+	margin:0;
+}
+
+/* INDEX- SIGNUP */
+.inicio{
+	background-image: url(../img/tastyfoodintro.jpg);
+	width:100%;
+	height:100vh;
+	background-size: cover;
+	background-position: center bottom;
+	h1{
+		color:white;
+		font-weight:900;
+		text-align: center;
+		margin-top: 6em;
+	}
+	.form-signup{
+		margin-top:6rem;
+	}
+	.btn-inicio{
+		display: block;
+		margin-top:3rem;
+		height:6vh;
+		background-color: $color_naranjo;
+		border-radius: 14px;
+	}
+	h4{
+		font-weight: 800;
+	}
+	p{
+		text-align:center;
+		color: $color_gris;
+		font-weight:800;
+		margin-top:2rem;
+		font-size:19px;
+	}
+}
+
+.signup{
+	background-color:$color_gris;
+	height:100vh;
+	width:100%;
+	h1{
+		color: $color_naranjo;
+		text-align:center;
+		margin-top:7rem;
+		font-weight:900;
+	}
+	.nice-signup{
+		text-align: center;
+		color: gray;
+	}
+	.btn-createaccount{
+		background-color: $color_naranjo;
+		width: 100%;
+		margin-top: 2rem;
+		border-radius:14px;
+	}
+	 label {
+    width: 100%;
+	}	
+}
+/* NAVBAR */
+.nav-wrapper{
+		background-color: $color_naranjo;
+	}	
+.side-nav li{
+	margin-top:5rem;
+}
+.side-nav li a{
+	font-size: 18px;
+}
+.side-nav li a:hover{
+	color: $color_naranjo;
+}
+/* fin index-signup */
 
