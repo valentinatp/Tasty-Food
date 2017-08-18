@@ -1,6 +1,19 @@
 
 nav{
 	background-color: $color_naranjo;
+	/* NAVBAR */
+	.nav-wrapper{
+		background-color: $color_naranjo;
+	}	
+	.side-nav li{
+		margin-top:5rem;
+	}
+	.side-nav li a{
+		font-size: 18px;
+	}
+	.side-nav li a:hover{
+		color: $color_naranjo;
+	}
 }
 /* PROFILE */
 /* font-family: 'Montserrat', sans-serif; */
@@ -39,7 +52,8 @@ nav{
 		background-color: $color_naranjo;
 	}.image{
 		height: 400px;
-		width: 100%;
+		width: 400px;
+		border-radius: 50%;
 	}
  }
 /* END PROFILE */
@@ -109,18 +123,3 @@ nav{
     width: 100%;
 	}	
 }
-/* NAVBAR */
-.nav-wrapper{
-		background-color: $color_naranjo;
-	}	
-.side-nav li{
-	margin-top:5rem;
-}
-.side-nav li a{
-	font-size: 18px;
-}
-.side-nav li a:hover{
-	color: $color_naranjo;
-}
-/* fin index-signup */
-
