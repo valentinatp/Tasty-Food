@@ -20254,16 +20254,16 @@ if (jQuery) {
 })(jQuery);
 
 $(document).ready(function(){
+	$("#tabla").hide();
     $(".button-collapse").sideNav();
     $('.cajita_restaurant').hide();
 	var arr_restaurantes = [];
-
     var ajaxZomato = function(element){
 				$.ajax({
 				url: 'https://developers.zomato.com/api/v2.1/search?entity_id=' + element + '&entity_type=city',
 		        type: 'GET',
 		        responseType: 'json',
-		        headers: { 'user-key': '022db00cbdf26d706981d4fa3235767a' },
+		        headers: { 'user-key': 'cc92ab23a53a5b062925e25e30238a19' },
 				})
 				.done(function(response){
 		            console.log(response.restaurants.slice(0, 18));
@@ -20293,9 +20293,9 @@ $(document).ready(function(){
 		            												`<p>${comuna}</p>`+
 		            											`</div>`+
 		            											`<div class="col s3 color-texto">`+
-		            												`<p><i class="large material-icons">restaurant</i></p>`+
+		            												'<p><i id="icono-'+id+'" class="large material-icons">restaurant</i></p>'+
 		            											`</div>`+
-															`</div>`+ 
+															`</div>`+
 		            									`</div>`);
 
 						}else{
@@ -20307,9 +20307,9 @@ $(document).ready(function(){
 		            												`<p>${comuna}</p>`+
 		            											`</div>`+
 		            											`<div class="col s3 color-texto">`+
-		            												`<p><i class="large material-icons">restaurant</i></p>`+
+		            												'<p><i id="icono-'+id+'" class="large material-icons">restaurant</i></p>'+
 		            											`</div>`+
-															`</div>`+ 
+															`</div>`+
 		            									`</div>`);
 						}
 
@@ -20340,8 +20340,34 @@ $(document).ready(function(){
 			            		localStorage.setItem("restaurantes", JSON.stringify(arr_restaurantes));
 			            	});
 		            	});
+                $('#icono-'+id).click(function(){
+                	$('.cajita_restaurant').hide();
+                	$("#tabla").show();
+					var abierto = false;
+					if (!abierto) {
+						$("#title_one").empty();
+						$("#title_one").append(restName);
+						$('#type_one').empty();
+						$("#type_one").append(cuisine);
+						$("#cost_one").empty();
+                        $("#cost_one").append('$'+costo);
+                        $("#rate_one").empty();
+                        $("#rate_one").append(rating);
+                        abierto = true;
+                      } else {
+                      	$("#title_two").empty();
+                        $("#type_two").empty();
+                        $("#cost_two").empty();
+                        $("#rate_two").empty();
+                        $("#title_two").append(restName);
+                        $("#type_two").append(cuisine);
+                        $("#cost_two").append(costo);
+                        $("#rate_two").append(rating);
+                        abierto = false;
+                      }
+
+                });
 		            })
-		            												
 		        })
 				.fail(function(){
 					console.log("error");
