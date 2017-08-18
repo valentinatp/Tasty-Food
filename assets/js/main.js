@@ -1,22 +1,40 @@
 $(document).ready(function(){
-	$(".button-collapse").sideNav();
 
 
 
-	function saveToLocalStorage() {
-        localStorage.setItem('photo', photo_url);      
-        localStorage.setItem('name', $('#name').val());
-        localStorage.setItem('email', $('#email').val());
-    }
 
+// funcion local storage
 
 	function getFromLocalStorage() {
-    console.log('getting info for: ' + localStorage.getItem('#photo'));
-    $('#photo').attr('src', localStorage.getItem('photo'));
     $('#name').val(localStorage.getItem('name'));
-    $('#email').val(localStorage.getItem('username'));
+
+    $('#email').val(localStorage.getItem('email'));
 }
 
+if(localStorage.img) { 
+//debugger;
+$('.image').attr('src', localStorage.img);
+}
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+    localStorage.setItem('img', e.target.result);
+      $('.image').attr('src', reader.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#profile_image").change(function() {
+  readURL(this);
+});
+
+$("#profile_image").on('click', function() {
+  $("#profile_image").click();
+});
 
 
 $(function(){
@@ -25,5 +43,7 @@ $(function(){
 		$(".image").attr("src",img);
 	})
 })
+
+// END funcion local storage
 
 });
