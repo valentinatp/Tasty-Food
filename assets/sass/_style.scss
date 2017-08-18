@@ -1,14 +1,28 @@
+
 #primera-seccion{
+	height: 90vh;
+	width: 100%;
 	div{
 		div{
 			div{
 				div{
 					div{
-						#map{
-							height: 500px;
-							width: 100%;
+						margin: 0;
+						div{
 							margin: 0;
-							position: relative;
+							padding: 0;
+							select{
+								z-index: 1000;
+								display: block;
+								position: relative;
+								width: 100%;
+							}							
+							#map{
+								height: 500px;
+								width: 100%;
+								margin: 0;
+								position: relative;
+							}
 						}
 					}
 				}
