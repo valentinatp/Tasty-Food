@@ -20308,7 +20308,7 @@ $(document).ready(function(){
     var parseJson = JSON.parse(localStorage.getItem("restaurantes"));
     parseJson.forEach(function(el){
         $('#favoritos').append('<div class="col s4">'+
-            '<div class="col s12 orange nombres_favoritos white-text center"><h4 class="perfil_h3">'+el+'</h4></div>'+
+            '<div class="col s12 orange nombres_favoritos white-text center"><h6 class="perfil_h3">'+el+'</h6></div>'+
             '</div>');
     })
 
@@ -20588,5 +20588,22 @@ $(document).ready(function(){
                     console.log("error");
                 })
             }
-    
+    //Select
+    $("#search").change(function(){
+        console.log("borrar");
+        $(".datos-restaurants").html("");
+        if(($("#search").val()) == "santiago"){
+            ajaxZomato(83);
+        }else if(($("#search").val()) == "río-de-janeiro"){
+            ajaxZomato(73);
+        }else if(($("#search").val()) == "sao-paulo"){
+            ajaxZomato(67);
+        }else if(($("#search").val()) == "roma"){
+            ajaxZomato(257);
+        }else if(($("#search").val()) == "new-york"){
+            ajaxZomato(280);
+        }else if(($("#search").val()) == "dublin"){
+            ajaxZomato(91);
+        }
+    })
 });

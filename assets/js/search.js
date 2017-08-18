@@ -111,5 +111,22 @@ $(document).ready(function(){
                     console.log("error");
                 })
             }
-    
+    //Select
+    $("#search").change(function(){
+        console.log("borrar");
+        $(".datos-restaurants").html("");
+        if(($("#search").val()) == "santiago"){
+            ajaxZomato(83);
+        }else if(($("#search").val()) == "río-de-janeiro"){
+            ajaxZomato(73);
+        }else if(($("#search").val()) == "sao-paulo"){
+            ajaxZomato(67);
+        }else if(($("#search").val()) == "roma"){
+            ajaxZomato(257);
+        }else if(($("#search").val()) == "new-york"){
+            ajaxZomato(280);
+        }else if(($("#search").val()) == "dublin"){
+            ajaxZomato(91);
+        }
+    })
 });
