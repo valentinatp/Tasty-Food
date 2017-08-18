@@ -20253,19 +20253,21 @@ if (jQuery) {
   };
 })(jQuery);
 
+
 $(document).ready(function(){
-
-
-
-
+ $(".button-collapse").sideNav();
+    $('#sign-session').click(onLogin);//listener to button click
+    $("#sign-session").click(saveToLocalStorage); //guarda a local storage
+    getFromLocalStorage(); //obtener local storage
 
 // funcion local storage
 	function getFromLocalStorage() {
         $('#name').val(localStorage.getItem('name'));
-        $('#name2').html(localStorage.getItem('name'));
+        var nombre_perfil = localStorage.getItem('name');
+        $('#name2').append('<h3>'+nombre_perfil+'</h3>');
 
         $('#email').val(localStorage.getItem('email'));
-         $('#email2').html(localStorage.getItem('email'));
+         $('#email2').val(localStorage.getItem('email'));
     }
 
     if(localStorage.img) { 
