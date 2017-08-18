@@ -1,1 +1,21 @@
-_style.scss
+
+#primera-seccion{
+	width: 100%;
+	div{
+		div{
+			div{
+				padding: 0;
+				margin: 0;
+				select{
+					display: block;
+					width: 100%;
+				}							
+			}
+		}
+	}
+}
+
+#map{
+	height: 90vh;
+	width: 100vw;
+}
