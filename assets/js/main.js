@@ -52,9 +52,15 @@ if(localStorage.img) {
     //funcion que envia a favoritos items guardados en local storage
     var parseJson = JSON.parse(localStorage.getItem("restaurantes"));
     parseJson.forEach(function(el){
+
       $('#favoritos').append('<div class="col s4">'+
         '<div class="col s12 orange nombres_favoritos white-text center"><h4 class="perfil_h3">'+el+'</h4></div>'+
         '</div>');
+
+        $('#favoritos').append('<div class="col s4">'+
+            '<div class="col s12 orange nombres_favoritos white-text center"><h6 class="perfil_h3">'+el+'</h6></div>'+
+            '</div>');
+
     })
 
     $(".button-collapse").sideNav();
